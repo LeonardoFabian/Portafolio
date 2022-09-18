@@ -1,0 +1,15 @@
+﻿@model IEnumerable<ProjectDTO>
+
+@if (Model is not null)
+{
+    <div class="text-center pt-4">
+        <h1>Proyectos recientes</h1>
+        <p>Aquí tienes algunos de mis trabajos más recientes</p>
+    </div>
+
+    <partial name="_ProjectsList" model="Model"/>
+
+    <div class="text-center py-4">
+        <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Projects">Mostrar todos</a>
+    </div>
+}
